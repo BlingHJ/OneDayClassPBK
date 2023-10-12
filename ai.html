@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>chatGPT API</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    /* page-loading */
+    #loading {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: fixed;
+      display: block;
+      opacity: 0.6;
+      background: #e4e4e4;
+      z-index: 99;
+      text-align: center;
+    }
+
+    #loading>img {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+      z-index: 100;
+    }
+
+    #loading>p {
+      position: absolute;
+      top: 57%;
+      left: 43%;
+      z-index: 101;
+    }
+    #keywords{
+        width: 300px;
+        margin: 0px auto;
+        clear: both;
+        display: inline;
+    }
+    #result{
+      width: 90%;
+      overflow: visible;
+      margin: 0px auto;
+    }
+    #wrap{
+      text-align: center;
+      margin: 0px auto;
+
+    }
+
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+  <h1>chatGPT API</h1>
+  <div>무엇이든 질문해보세요 !!</div>
+
+  <input type="text" id="keywords" name="keywords" class="form-control" required />
+  <button style="clear: both;" class="btn btn-primary" onclick="chatGPT()">입력</button>
+  <br>
+  </div>
+  <div id="result"></div>
+
+  <div id="loading">
+    <img src="https://studentrights.sen.go.kr/images/common/loading.gif">
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
